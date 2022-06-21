@@ -36,6 +36,7 @@ namespace CarAPI
             });
             services.AddDbContext<MssqlDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Database")));
             services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

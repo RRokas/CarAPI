@@ -28,7 +28,7 @@ namespace CarAPI.Controllers
             return _cars.GetAll();
         }
 
-        [HttpGet("GetAllCars/ByColor")]
+        [HttpGet("GetAllCars")]
         public IEnumerable<Car> GetByColor([FromQuery] string colorToGet)
         {
             return _cars.GetByColor(colorToGet);
